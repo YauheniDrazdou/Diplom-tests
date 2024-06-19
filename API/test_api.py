@@ -28,7 +28,6 @@ def pet_id():
     response = requests.post(url=f'{URL}pet', json=payload).json()
     yield response['id']
 
-    # delete after finishing the test
     requests.delete(url=f'{URL}pet/{pet_id}')
 
 
